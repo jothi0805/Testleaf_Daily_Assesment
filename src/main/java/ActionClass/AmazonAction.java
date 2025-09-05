@@ -12,6 +12,7 @@ public class AmazonAction {
 	public static void main(String[] args) {
 		ChromeDriver driver = new ChromeDriver();
 		driver.get("https://www.amazon.in/");
+		
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		driver.findElement(By.xpath("//button[text()='Continue shopping']")).click();
@@ -24,6 +25,7 @@ public class AmazonAction {
 		driver.findElement(By.xpath("//span[text='Add to Cart'][4]")).click();
 		WebElement cartsubtotal=driver.findElement(By.xpath("//span[@class='a-price-whole'][1]"));
 		System.out.println("cartsubtotal:"+cartsubtotal.getText());
+		
 		
 	}
 
